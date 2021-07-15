@@ -39,159 +39,11 @@ background-color: rgb(253, 235, 208);</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QGroupBox" name="datosBox">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>250</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Leelawadee</family>
-           <pointsize>22</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(252, 243, 207 );
-color: rgb(255);</string>
-         </property>
-         <property name="title">
-          <string>Cliente</string>
-         </property>
-         <layout class="QFormLayout" name="formLayout_2">
-          <item row="0" column="0">
-           <widget class="QLabel" name="Cedulatxt">
-            <property name="font">
-             <font>
-              <family>System</family>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Cédula:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="Nombretxt">
-            <property name="font">
-             <font>
-              <family>System</family>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Nombre:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="inNombre">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="Telefonotxt">
-            <property name="font">
-             <font>
-              <family>System</family>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Teléfono:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="inTelefono">
-            <property name="styleSheet">
-             <string notr="true">vcolor: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="Emailtxt">
-            <property name="font">
-             <font>
-              <family>System</family>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>E-mail:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="inEmail">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="Direcciontxt">
-            <property name="font">
-             <font>
-              <family>System</family>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Dirección:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QTextEdit" name="inDireccion">
-            <property name="minimumSize">
-             <size>
-              <width>60</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="inCedula">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(0, 0, 0);
-border-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item>
         <widget class="QGroupBox" name="groupBox_2">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>180</height>
+           <height>200</height>
           </size>
          </property>
          <property name="font">
@@ -464,8 +316,13 @@ background-color: rgb(255, 255, 255);</string>
              </item>
              <item row="3" column="1">
               <widget class="QPushButton" name="cmdFacturar">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 120, 42);
+font: 10pt &quot;Lucida Sans&quot;;
+color: rgb(0, 0, 0);</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Facturación</string>
                </property>
               </widget>
              </item>

@@ -2,7 +2,7 @@
 #define FACTURACION_H
 
 #include <QWidget>
-
+#include <QMessageBox>
 namespace Ui {
 class Facturacion;
 }
@@ -14,6 +14,12 @@ class Facturacion : public QWidget
 public:
     explicit Facturacion(QWidget *parent = nullptr);
     ~Facturacion();
+    void validacionCI();
+    bool verificador(QString);
+
+private slots:
+    void on_cmdFacturar_released();
+
 
 private:
     Ui::Facturacion *ui;

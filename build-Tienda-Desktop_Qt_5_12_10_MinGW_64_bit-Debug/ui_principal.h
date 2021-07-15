@@ -18,7 +18,6 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -26,7 +25,6 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -39,18 +37,6 @@ public:
     QHBoxLayout *horizontalLayout;
     QWidget *widget;
     QVBoxLayout *verticalLayout;
-    QGroupBox *datosBox;
-    QFormLayout *formLayout_2;
-    QLabel *Cedulatxt;
-    QLabel *Nombretxt;
-    QLineEdit *inNombre;
-    QLabel *Telefonotxt;
-    QLineEdit *inTelefono;
-    QLabel *Emailtxt;
-    QLineEdit *inEmail;
-    QLabel *Direcciontxt;
-    QTextEdit *inDireccion;
-    QLineEdit *inCedula;
     QGroupBox *groupBox_2;
     QFormLayout *formLayout_3;
     QLabel *PNombretxt;
@@ -101,110 +87,23 @@ public:
         widget->setMaximumSize(QSize(400, 16777215));
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        datosBox = new QGroupBox(widget);
-        datosBox->setObjectName(QString::fromUtf8("datosBox"));
-        datosBox->setMaximumSize(QSize(16777215, 250));
-        QFont font;
-        font.setFamily(QString::fromUtf8("Leelawadee"));
-        font.setPointSize(22);
-        font.setBold(true);
-        font.setWeight(75);
-        datosBox->setFont(font);
-        datosBox->setStyleSheet(QString::fromUtf8("background-color: rgb(252, 243, 207 );\n"
-"color: rgb(255);"));
-        formLayout_2 = new QFormLayout(datosBox);
-        formLayout_2->setObjectName(QString::fromUtf8("formLayout_2"));
-        Cedulatxt = new QLabel(datosBox);
-        Cedulatxt->setObjectName(QString::fromUtf8("Cedulatxt"));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("System"));
-        font1.setPointSize(12);
-        font1.setBold(true);
-        font1.setWeight(75);
-        Cedulatxt->setFont(font1);
-
-        formLayout_2->setWidget(0, QFormLayout::LabelRole, Cedulatxt);
-
-        Nombretxt = new QLabel(datosBox);
-        Nombretxt->setObjectName(QString::fromUtf8("Nombretxt"));
-        Nombretxt->setFont(font1);
-
-        formLayout_2->setWidget(1, QFormLayout::LabelRole, Nombretxt);
-
-        inNombre = new QLineEdit(datosBox);
-        inNombre->setObjectName(QString::fromUtf8("inNombre"));
-        inNombre->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"background-color: rgb(255, 255, 255);"));
-
-        formLayout_2->setWidget(1, QFormLayout::FieldRole, inNombre);
-
-        Telefonotxt = new QLabel(datosBox);
-        Telefonotxt->setObjectName(QString::fromUtf8("Telefonotxt"));
-        Telefonotxt->setFont(font1);
-
-        formLayout_2->setWidget(2, QFormLayout::LabelRole, Telefonotxt);
-
-        inTelefono = new QLineEdit(datosBox);
-        inTelefono->setObjectName(QString::fromUtf8("inTelefono"));
-        inTelefono->setStyleSheet(QString::fromUtf8("vcolor: rgb(0, 0, 0);\n"
-"background-color: rgb(255, 255, 255);"));
-
-        formLayout_2->setWidget(2, QFormLayout::FieldRole, inTelefono);
-
-        Emailtxt = new QLabel(datosBox);
-        Emailtxt->setObjectName(QString::fromUtf8("Emailtxt"));
-        Emailtxt->setFont(font1);
-
-        formLayout_2->setWidget(3, QFormLayout::LabelRole, Emailtxt);
-
-        inEmail = new QLineEdit(datosBox);
-        inEmail->setObjectName(QString::fromUtf8("inEmail"));
-        inEmail->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);"));
-
-        formLayout_2->setWidget(3, QFormLayout::FieldRole, inEmail);
-
-        Direcciontxt = new QLabel(datosBox);
-        Direcciontxt->setObjectName(QString::fromUtf8("Direcciontxt"));
-        Direcciontxt->setFont(font1);
-
-        formLayout_2->setWidget(4, QFormLayout::LabelRole, Direcciontxt);
-
-        inDireccion = new QTextEdit(datosBox);
-        inDireccion->setObjectName(QString::fromUtf8("inDireccion"));
-        inDireccion->setMinimumSize(QSize(60, 0));
-        inDireccion->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        formLayout_2->setWidget(4, QFormLayout::FieldRole, inDireccion);
-
-        inCedula = new QLineEdit(datosBox);
-        inCedula->setObjectName(QString::fromUtf8("inCedula"));
-        inCedula->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"border-color: rgb(0, 0, 0);\n"
-"background-color: rgb(255, 255, 255);"));
-
-        formLayout_2->setWidget(0, QFormLayout::FieldRole, inCedula);
-
-
-        verticalLayout->addWidget(datosBox);
-
         groupBox_2 = new QGroupBox(widget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setMaximumSize(QSize(16777215, 180));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Georgia"));
-        font2.setPointSize(14);
-        groupBox_2->setFont(font2);
+        groupBox_2->setMaximumSize(QSize(16777215, 200));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Georgia"));
+        font.setPointSize(14);
+        groupBox_2->setFont(font);
         groupBox_2->setStyleSheet(QString::fromUtf8("background-color: rgb(252, 243, 207);\n"
 "color: rgb(0,0,0);"));
         formLayout_3 = new QFormLayout(groupBox_2);
         formLayout_3->setObjectName(QString::fromUtf8("formLayout_3"));
         PNombretxt = new QLabel(groupBox_2);
         PNombretxt->setObjectName(QString::fromUtf8("PNombretxt"));
-        QFont font3;
-        font3.setFamily(QString::fromUtf8("Eras Demi ITC"));
-        font3.setPointSize(9);
-        PNombretxt->setFont(font3);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Eras Demi ITC"));
+        font1.setPointSize(9);
+        PNombretxt->setFont(font1);
 
         formLayout_3->setWidget(0, QFormLayout::LabelRole, PNombretxt);
 
@@ -217,7 +116,7 @@ public:
 
         PCantidadtxt = new QLabel(groupBox_2);
         PCantidadtxt->setObjectName(QString::fromUtf8("PCantidadtxt"));
-        PCantidadtxt->setFont(font3);
+        PCantidadtxt->setFont(font1);
 
         formLayout_3->setWidget(1, QFormLayout::LabelRole, PCantidadtxt);
 
@@ -230,7 +129,7 @@ public:
 
         PPreciotxt = new QLabel(groupBox_2);
         PPreciotxt->setObjectName(QString::fromUtf8("PPreciotxt"));
-        PPreciotxt->setFont(font3);
+        PPreciotxt->setFont(font1);
 
         formLayout_3->setWidget(2, QFormLayout::LabelRole, PPreciotxt);
 
@@ -319,18 +218,18 @@ public:
 
         Totaltxt = new QLabel(widget_4);
         Totaltxt->setObjectName(QString::fromUtf8("Totaltxt"));
-        QFont font4;
-        font4.setPointSize(14);
-        font4.setBold(true);
-        font4.setWeight(75);
-        Totaltxt->setFont(font4);
+        QFont font2;
+        font2.setPointSize(14);
+        font2.setBold(true);
+        font2.setWeight(75);
+        Totaltxt->setFont(font2);
 
         formLayout->setWidget(2, QFormLayout::LabelRole, Totaltxt);
 
         outTotal = new QLabel(widget_4);
         outTotal->setObjectName(QString::fromUtf8("outTotal"));
         outTotal->setMinimumSize(QSize(100, 0));
-        outTotal->setFont(font4);
+        outTotal->setFont(font2);
         outTotal->setLayoutDirection(Qt::LeftToRight);
         outTotal->setStyleSheet(QString::fromUtf8("color: rgb(224, 27, 36);\n"
 "background-color: rgb(255, 255, 255);"));
@@ -340,6 +239,9 @@ public:
 
         cmdFacturar = new QPushButton(widget_4);
         cmdFacturar->setObjectName(QString::fromUtf8("cmdFacturar"));
+        cmdFacturar->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 120, 42);\n"
+"font: 10pt \"Lucida Sans\";\n"
+"color: rgb(0, 0, 0);"));
 
         formLayout->setWidget(3, QFormLayout::FieldRole, cmdFacturar);
 
@@ -369,12 +271,6 @@ public:
     void retranslateUi(QMainWindow *Principal)
     {
         Principal->setWindowTitle(QApplication::translate("Principal", "Tienda", nullptr));
-        datosBox->setTitle(QApplication::translate("Principal", "Cliente", nullptr));
-        Cedulatxt->setText(QApplication::translate("Principal", "C\303\251dula:", nullptr));
-        Nombretxt->setText(QApplication::translate("Principal", "Nombre:", nullptr));
-        Telefonotxt->setText(QApplication::translate("Principal", "Tel\303\251fono:", nullptr));
-        Emailtxt->setText(QApplication::translate("Principal", "E-mail:", nullptr));
-        Direcciontxt->setText(QApplication::translate("Principal", "Direcci\303\263n:", nullptr));
         groupBox_2->setTitle(QApplication::translate("Principal", "Productos", nullptr));
         PNombretxt->setText(QApplication::translate("Principal", "Nombre:", nullptr));
         PCantidadtxt->setText(QApplication::translate("Principal", "Cantidad:", nullptr));
@@ -388,7 +284,7 @@ public:
         outIva->setText(QApplication::translate("Principal", "0.0", nullptr));
         Totaltxt->setText(QApplication::translate("Principal", "TOTAL:", nullptr));
         outTotal->setText(QApplication::translate("Principal", "0.0", nullptr));
-        cmdFacturar->setText(QApplication::translate("Principal", "PushButton", nullptr));
+        cmdFacturar->setText(QApplication::translate("Principal", "Facturaci\303\263n", nullptr));
     } // retranslateUi
 
 };
