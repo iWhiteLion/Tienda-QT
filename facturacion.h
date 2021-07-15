@@ -16,6 +16,7 @@ public:
     ~Facturacion();
     void validacionCI();
     bool verificador(QString);
+    QString resultado();
 
 private slots:
     void on_cmdFacturar_released();

@@ -36,6 +36,8 @@ void Facturacion::on_cmdFacturar_released()
         ui->inCedula->setStyleSheet("color : red");
     }
 
+    ui->outResultado->append(resultado());
+
 }
 
 
@@ -84,3 +86,14 @@ bool Facturacion::verificador(QString cedula)
     return ultimoCedula == verificador? true : false;
 }
 
+QString Facturacion::resultado()
+{
+    QString str;
+
+    str = "Cedula: " + ui->inCedula->text(); + "\n";
+    str += "\nNombre: " + ui->inNombre->text(); + "\n";
+    str += "\nTelefono: " + ui->inTelefono->text(); + "\n";
+    str += "\nE-Mail: " +  ui->inEmail->text(); + "\n";
+    str += "\nDireccion: " + ui->inDireccion->text(); + "\n";
+    return str;
+}

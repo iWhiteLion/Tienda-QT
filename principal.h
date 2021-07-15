@@ -33,6 +33,7 @@ private:
     void calcular(float stProducto);
     void validacionCI();
     Facturacion f;
+    void borrarDatos();
 
 };
 #endif // PRINCIPAL_H

@@ -14,7 +14,7 @@ Principal::Principal(QWidget *parent)
     m_productos.append(new Producto(3,"Queso",2.00));
     // Mostrar la lista en la ventana
     for (int i = 0; i < m_productos.size(); ++i) {
-       ui->inProducto->addItem(m_productos.at(i)->nombre());
+        ui->inProducto->addItem(m_productos.at(i)->nombre());
     }
     // Colocar cabecera de la tabla
     QStringList cabecera = {"Cantidad", "Producto", "Subtotal"};
@@ -32,11 +32,11 @@ Principal::~Principal()
 
 void Principal::on_cmdAgregar_released()
 {
-int cantidad = ui->inCantidad->value();
+    int cantidad = ui->inCantidad->value();
     if (cantidad == 0){
-            QMessageBox::warning(this, "Tienda","No se pueden ingresar 0 productos");
-            return;
-        }
+        QMessageBox::warning(this, "Tienda","No se pueden ingresar 0 productos");
+        return;
+    }
     // Obtener datos de la GUI
     int index = ui->inProducto->currentIndex();
     Producto *p = m_productos.at(index);
@@ -80,16 +80,26 @@ void Principal::calcular(float stProducto)
     ui->outTotal->setText(QString::number(total,'f',2));
 }
 
+void Principal::borrarDatos()
+{
+    ui->outSubtotal->setText("0");
+    ui->outIva->setText("0");
+    ui->outTotal->setText("0");
+    ui->inCantidad->cleanText();
+    ui->inProducto->clearEditText();
+    ui->outDetalle->clearContents();
+    ui->outPrecio->setText("0");
+}
+
 
 void Principal::on_cmdFacturar_clicked()
 {    
     QString m_total = ui->outTotal->text();
-        if (m_total=="0.0"){
-                QMessageBox::warning(this, "Tienda","No se puede continuar si no ha ingresado productos");
-                return;
-            }else{
-            f.show();
-            this->close();
-        }
+    if (m_total=="0.0"){
+        QMessageBox::warning(this, "Tienda","No se puede continuar si no ha ingresado productos");
+        return;
+    }else{
+        borrarDatos();
+        f.show();
+    }
 }
-
